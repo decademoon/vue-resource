@@ -943,6 +943,7 @@ function xhrClient (request) {
         xhr.open(request.method, request.getUrl(), true);
         xhr.timeout = 0;
         xhr.onload = handler;
+        xhr.onabort = handler;
         xhr.onerror = handler;
 
         if (request.progress) {
